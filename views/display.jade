@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  h1= title
+  <p> Welcome to #{title}. Number of nodes: #{number}
+  </p>
+  div
+    table(border='1')
+        thead
+            tr
+                th number
+                th id
+                th taken
+        tbody
+            each item, i in items
+                tr
+                    td= i+1
+                    td= item.id
+                    td= item.taken
