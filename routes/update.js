@@ -1,7 +1,8 @@
 var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
-var url = 'mongodb://localhost:27017/mydb';
+//var url = 'mongodb://localhost:27017/mydb';
+var url = 'mongodb://$OPENSHIFT_MONGODB_DB_HOST:$OPENSHIFT_MONGODB_DB_PORT/';
 var itemList;
 var MongoClient = require('mongodb').MongoClient;
 var stringToBool;
